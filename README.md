@@ -15,14 +15,34 @@
 
 ---
 
-## 📸 设计核心样式
+<p align="center">
+  <img src="static/media/lifegrid_timelapse_comparison.gif" alt="PillarDial Wall 全年流逝渐进充盈展示" width="800" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.8);" />
+  <br>
+  <em>▲ 12 个月份随着真实天数渐进充盈 · 跨年元旦自动重置演进效果 (双样式 60fps 动态仿真)</em>
+</p>
 
-本项目精准实现并还原了两种标志性的时间美学设计：
+---
 
-| 样式 1: 时间立柱液位计 (Style 1 · Monolithic Pillars) | 样式 3: 瑞士腕表年历盘 (Style 3 · Chronometer Dial) |
+## 📸 设计核心样式与实机效果展示
+
+本项目精准实现并还原了两种标志性的时间美学设计，完美避让 iPhone 灵动岛、锁屏时钟与底部快捷键：
+
+<p align="center">
+  <img src="assets/showcase_comparison.png" alt="iPhone 16 Pro 锁屏实机并排效果图" width="780" style="border-radius: 16px;" />
+  <br>
+  <em>▲ iPhone 16 Pro 真机锁屏实景适配海报 (左: Style 1 时间立柱 · 右: Style 3 瑞士年历盘)</em>
+</p>
+
+### 样式对比与全年演进动效
+
+| 样式 1: 时间立柱液位计 (Monolithic Pillars) | 样式 3: 瑞士腕表年历盘 (Chronometer Dial) |
 | :---: | :---: |
-| 12 根纵向胶囊立柱并排居中，宛如精密物理液位计 | 12 扇区分割的天体年历圆环罗盘，致敬经典制表工艺 |
-| 过去月份 100% 充盈纯白实体光芒；<br>当前月份按当月天数进度从底部向上升起；<br>未来月份深灰线框静候光阴；<br>底端大字排印剩余天数与年度进度百分比。 | 12 点钟顺时针运转，月份数字清晰呼应；<br>当前月份动态弧形胶囊流光充盈；<br>中央黄金比例大字排印剩余天数；<br>纯黑 OLED 深度黑，尽显机械腕表的高级感。 |
+| <img src="assets/showcase_pillars.png" width="360" alt="Style 1 锁屏实机静态效果图" /> | <img src="assets/showcase_dial.png" width="360" alt="Style 3 锁屏实机静态效果图" /> |
+| <img src="static/media/preview_pillars.gif" width="360" alt="Style 1 全年充盈演进动图" /> | <img src="static/media/preview_dial.gif" width="360" alt="Style 3 全年充盈演进动图" /> |
+| **12 根纵向胶囊立柱** 并排居中，宛如物理液位计。<br>• 过去月份 100% 充盈纯白实体光芒；<br>• 当前月份按当月天数进度从底部向上升起；<br>• 未来月份深灰线框静候光阴；<br>• 底端大字排印剩余天数与年度进度百分比。 | **12 扇区分割的天体年历圆环** 罗盘，致敬制表工艺。<br>• 12 点钟顺时针运转，月份数字清晰呼应；<br>• 当前月份动态弧形胶囊流光充盈；<br>• 中央黄金比例大字排印剩余天数；<br>• 纯黑 OLED 深度黑，尽显机械腕表的高级感。 |
+
+> 🌐 **关于在线体验网址**：  
+> 官方公共演示站点与快捷指令直装服务正在完成域名备案与自动化边缘节点部署，将在近期随新版本正式公开！目前您可以通过下方教程在本地或私有服务器通过 Docker / Python 一键启动运行。
 
 ---
 
