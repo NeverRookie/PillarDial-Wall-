@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  lifegrid-wallpaper:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    container_name: lifegrid-wallpaper
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - TZ=Asia/Shanghai
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

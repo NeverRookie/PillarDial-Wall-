@@ -1,0 +1,145 @@
+# ==============================================================================
+# LifeGrid Wallpaper - Git 忽略规则 (.gitignore)
+# 作用: 规避商业字体侵权风险、保护个人服务器 IP/域名等隐私信息、忽略编译与临时文件
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. 字体版权与专有资产合规规避 (Font Legal Compliance)
+# ------------------------------------------------------------------------------
+# 严格禁止任何非开源、商业专有版权字体上传至公共仓库 (避免字体版权侵权索赔)
+*Zapfino*
+*zapfino*
+*Helvetica*
+*helvetica*
+*SanFrancisco*
+*SFPro*
+*SF-Pro*
+*SFNS*
+*Avenir*
+
+# 临时字体压缩包与缓存
+assets/fonts/*.zip
+assets/fonts/*.tar.gz
+assets/fonts/*.rar
+assets/fonts/custom/
+assets/fonts/private/
+
+# ------------------------------------------------------------------------------
+# 2. 个人隐私、服务器信息与敏感配置 (Privacy & Sensitive Configs)
+# ------------------------------------------------------------------------------
+# 部署状态、个人 IP 与内部域名记录
+deploy/*部署状态*.md
+deploy/*domain*.md
+deploy/*server*.md
+deploy/local_*
+deploy/*.local.*
+deploy/*.private.*
+
+# 环境变量与机密凭证
+.env
+.env.*
+!.env.example
+secrets/
+*.secret
+*.token
+*.key
+*.pem
+*.crt
+*.csr
+*.pfx
+*.p12
+
+# 备份文件
+*.bak
+*.backup
+*backup*
+
+# ------------------------------------------------------------------------------
+# 3. 本地调试与临时生成的壁纸图片 (Local Test & Temporary Images)
+# ------------------------------------------------------------------------------
+# 测试脚本生成的今日壁纸图片
+downloaded_today_*.png
+downloaded_today*.png
+today*.png
+test_output*.png
+output_*.png
+*.tmp
+
+# 临时多媒体处理缓存
+.tempmediaStorage/
+temp/
+tmp/
+
+# ------------------------------------------------------------------------------
+# 4. Python 编译缓存与虚拟环境 (Python & Environments)
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 虚拟环境
+venv/
+.venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 测试与覆盖率
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+
+# ------------------------------------------------------------------------------
+# 5. 系统缓存与 IDE 编辑器配置 (OS & IDE)
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# IDE 编辑器配置
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# ------------------------------------------------------------------------------
+# 6. 日志与进程守护 (Logs & Daemons)
+# ------------------------------------------------------------------------------
+*.log
+logs/
+nohup.out
+gunicorn_access.log
+gunicorn_error.log
+uvicorn.log
